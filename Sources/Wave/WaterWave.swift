@@ -8,12 +8,7 @@
 import SwiftUI
 
 public struct WaterWave: Shape {
-    public init(progress: CGFloat = 0.0, strength: Double = 0.0, frequency: Double = 0.0, phase: Double = 0.0) {
-        self.progress = progress
-        self.strength = strength
-        self.frequency = frequency
-        self.phase = phase
-    }
+    // MARK: Properties
     
     public var progress: CGFloat
     public var strength: Double
@@ -24,6 +19,17 @@ public struct WaterWave: Shape {
         get { phase }
         set { self.phase = newValue }
     }
+    
+    // MARK: Lifecycle
+    
+    public init(progress: CGFloat = 0.0, strength: Double = 0.0, frequency: Double = 0.0, phase: Double = 0.0) {
+        self.progress = progress
+        self.strength = strength
+        self.frequency = frequency
+        self.phase = phase
+    }
+    
+    // MARK: Methods
     
     public func path(in rect: CGRect) -> Path {
         let path = UIBezierPath()

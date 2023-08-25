@@ -2,6 +2,8 @@
 import SwiftUI
 
 public struct Wave: Shape {
+    // MARK: Properties
+    
     var strength: Double
     var frequency: Double
     var phase: Double
@@ -10,6 +12,16 @@ public struct Wave: Shape {
         get { phase }
         set { self.phase = newValue }
     }
+    
+    // MARK: Lifecycle
+    
+    public init(strength: Double = 0.0, frequency: Double = 0.0, phase: Double = 0.0) {
+        self.strength = strength
+        self.frequency = frequency
+        self.phase = phase
+    }
+    
+    // MARK: Methods
     
     public func path(in rect: CGRect) -> Path {
         let path = UIBezierPath()
