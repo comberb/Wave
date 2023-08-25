@@ -7,18 +7,18 @@
 
 import SwiftUI
 
-struct WaterWave: Shape {
-    @Binding var progress: CGFloat
-    @Binding var strength: Double
-    @Binding var frequency: Double
-    var phase: Double
+public struct WaterWave: Shape {
+    public @Binding var progress: CGFloat
+    public @Binding var strength: Double
+    public @Binding var frequency: Double
+    public var phase: Double
     
-    var animatableData: Double {
+    public var animatableData: Double {
         get { phase }
         set { self.phase = newValue }
     }
     
-    func path(in rect: CGRect) -> Path {
+    public func path(in rect: CGRect) -> Path {
         let path = UIBezierPath()
         
         let width = Double(rect.width)
