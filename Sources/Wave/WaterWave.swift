@@ -8,9 +8,16 @@
 import SwiftUI
 
 public struct WaterWave: Shape {
-    @Binding public var progress: CGFloat
-    @Binding public var strength: Double
-    @Binding public var frequency: Double
+    public init(progress: CGFloat = 0.0, strength: Double = 0.0, frequency: Double = 0.0, phase: Double = 0.0) {
+        self.progress = progress
+        self.strength = strength
+        self.frequency = frequency
+        self.phase = phase
+    }
+    
+    public var progress: CGFloat
+    public var strength: Double
+    public var frequency: Double
     public var phase: Double
     
     public var animatableData: Double {
