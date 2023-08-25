@@ -1,5 +1,5 @@
 //
-//  SwiftUIView.swift
+//  WaveView.swift
 //  
 //
 //  Created by Ben Comber on 25/08/2023.
